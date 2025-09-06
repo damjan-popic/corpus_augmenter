@@ -103,11 +103,8 @@ python tei2conllu_reannotate.py \
 
 Augment with Classla
 
-python run_classla.py \
-  --mode augment --lang sl \
-  --in out_conllu_from_tei \
-  --out out_augmented \
-  --stats out_stats
+(classla) damjan@damjan-work:~/projects/classla_tag$ export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+(classla) damjan@damjan-work:~/projects/classla_tag$ python run_classla.py   --mode augment --lang sl   --in out_conllu_from_tei   --out out_augmented   --stats out_stats   --sent-batch 512   --batches tokenize=30000,pos=6000,lemma=15000,depparse=4000,ner=1000
 
 
 (Optional) Merge subcorpora
