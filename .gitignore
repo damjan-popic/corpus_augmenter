@@ -1,0 +1,6 @@
+datasets/
+out_augmented/
+out_combined/
+out_conllu_from_tei/
+stats/
+out_stats/
